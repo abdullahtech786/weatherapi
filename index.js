@@ -133,13 +133,13 @@ weatherData = {
       );
       const data = await res.json();
       if (data.cod >= 400) {
-        this.showMessage(data.message);
+        UI.showMessage(data.message);
         return false;
       } else {
         return data;
       }
     } catch (err) {
-      this.showMessage("Problem in fetching weather");
+      UI.showMessage("Problem in fetching weather");
     }
   },
 };
